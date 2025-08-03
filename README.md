@@ -35,6 +35,12 @@ To build the project run:
 ng build --define GITHUB_TOKEN=\'$GITHUB_TOKEN\'
 ```
 
+```bash
+serve dist
+```
+
+Navigate to http://localhost:3000.
+
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
 ## Running unit tests
