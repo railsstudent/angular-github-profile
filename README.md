@@ -31,7 +31,8 @@ ng generate --help
 To build the project run:
 
 ```bash
-ng build
+ export GITHUB_TOKEN=<github personal token >
+ng build --define GITHUB_TOKEN=\'$GITHUB_TOKEN\'
 ```
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
