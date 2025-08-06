@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { GithubProfileCardComponent } from './github-profile-card.coponent';
 
 @Component({
@@ -8,7 +8,7 @@ import { GithubProfileCardComponent } from './github-profile-card.coponent';
         <div class="header">
             <h1>Github Profile List (Angular Ver.)</h1>
         </div>
-        @for (username of usernames; track username) {
+        @for (username of usernames(); track username) {
             <app-github-profile-card [username]="username"/>
         }
     `,
@@ -28,5 +28,5 @@ import { GithubProfileCardComponent } from './github-profile-card.coponent';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GithubProfileListComponent {
-    readonly usernames = ['johnsoncodehk', 'antfu', 'railsstudent', 'danielkellyio', 'hootlex', 'MooseSaeed'];   
+    usernames = input.required<string[]>();   
 }

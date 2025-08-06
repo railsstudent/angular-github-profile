@@ -4,7 +4,9 @@ import { GithubProfileListComponent } from './github/components/github-profile-l
 @Component({
   selector: 'app-root',
   imports: [GithubProfileListComponent],
-  template: '<app-github-profile-list />',
+  template: '<app-github-profile-list [usernames]="usernames" />',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {}
+export class AppComponent {
+  readonly usernames = ['johnsoncodehk', 'antfu', 'railsstudent', 'danielkellyio', 'hootlex', 'MooseSaeed'];   
+}
