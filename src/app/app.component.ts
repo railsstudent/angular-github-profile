@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { GithubProfileListComponent } from './github/components/github-profiles.component';
+import { GithubProfileListComponent } from './github/components/github-profile-list.component';
 
 @Component({
   selector: 'app-root',

@@ -4,29 +4,7 @@ import { GithubProfile } from '../types/github-profile.type';
 
 @Component({
     selector: 'app-github-profile-card',
-    template: `
-        @let status = profileResource.status();
-        @if (status === 'loading') {
-            <p>Loading profile...</p>
-        } @else if (status === 'error') {
-            <p>Error loading profile: {{ error() }}</p>
-        } @else {
-            @if (profile(); as profile) {
-                <div>
-                    <img [src]="profile.avatar_url" [attr.alt]="profile.name" class="avatar" />
-                    <p>Username: {{ profile.login }}</p>
-                    <p>Name: {{ profile.name }}</p>
-                    <p>Bio: {{ profile.bio || 'N/A' }}</p>
-                    <p>Followers: {{ profile.followers }}</p>
-                    <p>Following: {{ profile.following }}</p>
-                    <p>Public Repos: {{ profile.public_repos }}</p>
-                    <a [href]="profile.html_url" target="_blank" rel="noopener noreferrer">
-                        View Profile
-                    </a>
-                </div>
-            }
-        }
-    `,
+    templateUrl: './github-profile-card.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class GithubProfileCardComponent {
