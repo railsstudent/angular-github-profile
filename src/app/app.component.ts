@@ -4,7 +4,11 @@ import { GithubProfileListComponent } from './github/components/github-profile-l
 @Component({
   selector: 'app-root',
   imports: [GithubProfileListComponent],
-  template: '<app-github-profile-list [usernames]="usernames" />',
+  template: `
+    <div id="app">
+      <app-github-profile-list [usernames]="usernames" />
+    </div>
+  `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
