@@ -6,7 +6,7 @@ import { GithubProfileCardComponent } from './github-profile-card.coponent';
     imports: [GithubProfileCardComponent],
     template: `
         <div class="header">
-            <h1>Github Profile List (Angular Ver.)</h1>
+            <h1 class="text-3xl">Github Profile List (Angular Ver.)</h1>
         </div>
         @for (username of usernames(); track username) {
             <app-github-profile-card [username]="username"/>
