@@ -13,10 +13,10 @@ import { GithubProfileCardComponent } from './github-profile-card.coponent';
         }
     `,
     styles: `
+        @reference "../../../styles.css";
+
         :host {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            padding: 0 2rem;
+            @apply grid grid-cols-2 pt-0 pb-0 pl-[2rem] pr-[2rem]
         }
     `,
     changeDetection: ChangeDetectionStrategy.OnPush,
