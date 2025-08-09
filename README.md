@@ -31,8 +31,8 @@ ng generate --help
 To build the project run:
 
 ```bash
- export GITHUB_TOKEN=<github personal token >
-ng build --define GITHUB_TOKEN=\'$GITHUB_TOKEN\'
+ export SECRET_GITHUB_TOKEN=<github personal token >
+ng build --define SECRET_GITHUB_TOKEN=\'$SECRET_GITHUB_TOKEN\'
 ```
 
 ```bash

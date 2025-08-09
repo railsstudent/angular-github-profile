@@ -1,1 +1,1 @@
-declare const GITHUB_TOKEN: string;
+declare const SECRET_GITHUB_TOKEN: string;

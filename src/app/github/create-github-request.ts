@@ -3,7 +3,7 @@ export function createRequest(username?: string) {
         url: `https://api.github.com/users/${username}`,
         method: 'GET',
         headers: {
-            Authorization: `Bearer ${GITHUB_TOKEN}`
+            Authorization: `Bearer ${SECRET_GITHUB_TOKEN}`
         }
     }: undefined;
 }

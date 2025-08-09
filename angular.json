@@ -29,7 +29,7 @@
               "src/styles.css"
             ],
             "define": {
-              "GITHUB_TOKEN": "'secret value'"
+              "SECRET_GITHUB_TOKEN": "'secret value'"
             }
           },
           "configurations": {
