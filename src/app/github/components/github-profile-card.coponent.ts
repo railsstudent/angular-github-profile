@@ -1,5 +1,6 @@
 import { httpResource } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
+import { createRequest } from '../create-github-request';
 import { GithubProfile } from '../types/github-profile.type';
 
 @Component({
@@ -10,13 +11,7 @@ import { GithubProfile } from '../types/github-profile.type';
 export class GithubProfileCardComponent {
     username = input.required<string>();
 
-    profileResource = httpResource<GithubProfile>(() => this.username() ? { 
-            url: `https://api.github.com/users/${this.username()}`,
-            method: 'GET',
-            headers: {
-                Authorization: `Bearer ${GITHUB_TOKEN}`
-            }
-        }: undefined, {
+    profileResource = httpResource<GithubProfile>(() => createRequest(this.username()), {
         equal: (a, b) => a?.login === b?.login,
     });
 

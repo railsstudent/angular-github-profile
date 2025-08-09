@@ -5,7 +5,7 @@ import { GithubProfileCardComponent } from './github-profile-card.coponent';
     selector: 'app-github-profile-list',
     imports: [GithubProfileCardComponent],
     template: `
-        <div class="header">
+        <div class="p-[0.75rem] col-span-full text-center">
             <h1 class="text-3xl">Github Profile List (Angular Ver.)</h1>
         </div>
         @for (username of usernames(); track username) {
@@ -17,12 +17,6 @@ import { GithubProfileCardComponent } from './github-profile-card.coponent';
             display: grid;
             grid-template-columns: 1fr 1fr;
             padding: 0 2rem;
-        }
-
-        div.header {
-            grid-column: 1 / -1;
-            text-align: center;
-            padding: 0.75rem;
         }
     `,
     changeDetection: ChangeDetectionStrategy.OnPush,
