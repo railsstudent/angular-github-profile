@@ -46,8 +46,7 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all",
-              "baseHref": "https://railsstudent.github.io/angular-github-profile/"
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,
