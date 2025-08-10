@@ -32,12 +32,13 @@ jobs:
         run: npm install
 
       - name: Build site (example for a static site generator)
-        env:
-          VITE_GITHUB_TOKEN: ${{ secrets.SECRET_GITHUB_TOKEN }}
-        run: npm run build # or your build command
+        run: npm run build -- --define SECRET_GITHUB_TOKEN=\'${{ secrets.SECRET_GITHUB_TOKEN }}\' --base-href=https://railsstudent.github.io/angular-github-profile/  # or your build command
 
       - name: Add .nojekyll file
-        run: touch build/.nojekyll
+        run: touch dist/.nojekyll
+
+      - name: Add 404.html file
+        run: cp dist/index.html dist/404.html
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v3
